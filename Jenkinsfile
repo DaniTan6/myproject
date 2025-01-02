@@ -17,7 +17,7 @@ pipeline {
 
         stage('Front-End Unit Test') {
           steps {
-            sh 'npm run'
+            sh 'cd /home/react-app && npm i && npm run test:unit'
           }
         }
 
