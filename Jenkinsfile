@@ -17,19 +17,13 @@ pipeline {
 
         stage('add npm install and run') {
           steps {
-            sh '''#!/bin/bash
-
-# Update the package index
+            sh '''sh \'\'\'
 sudo apt update
-
 # Install Node.js and npm
 sudo apt install -y nodejs npm
-
-# Verify the installation
 node -v
 npm -v
-
-'''
+\'\'\''''
           }
         }
 
