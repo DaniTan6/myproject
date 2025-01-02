@@ -17,13 +17,7 @@ pipeline {
 
         stage('add npm install and run') {
           steps {
-            sh '''sh \'\'\'
-sudo apt update
-# Install Node.js and npm
-sudo apt install -y nodejs npm
-node -v
-npm -v
-\'\'\''''
+            sh '#!/bin/bash sudo apt update sudo apt install -y nodejs npm node -v npm -v'
           }
         }
 
