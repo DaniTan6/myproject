@@ -17,7 +17,7 @@ pipeline {
 
         stage('add npm install and run') {
           steps {
-            sh '#!/bin/bash sudo apt update sudo apt install -y nodejs npm node -v npm -v'
+            sh 'cd myproject && npm i && npm run test:unit'
           }
         }
 
